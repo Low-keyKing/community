@@ -15,7 +15,7 @@ CREATE TABLE `user` (
   `gmt_create` bigint(20) DEFAULT NULL,
   `gmt_modified` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 
 ```
