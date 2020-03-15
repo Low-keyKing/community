@@ -5,6 +5,7 @@
 [Spring官方文档](https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/htmlsingle/#boot-features-embedded-database-support)
 ##工具
 [Visual Paradigm](http://www.visual-paradigm.com)
+[flyway](https://flywaydb.org/getstarted/firststeps/maven)
 ##脚本
 ```sql
 CREATE TABLE `user` (

@@ -1,4 +1,3 @@
-SHOW community;
 CREATE TABLE `user` (
   `id` int NOT NULL AUTO_INCREMENT,
   `account_id` varchar(100) DEFAULT NULL,
