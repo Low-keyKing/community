@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>主页</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <script src="https://how2j.cn/study/js/jquery/2.0.0/jquery.min.js"></script>
     <link href="https://how2j.cn/study/css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
     <script src="https://how2j.cn/study/js/bootstrap/3.3.6/bootstrap.min.js"></script>
@@ -13,7 +13,8 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">XX社区</span>
             </button>
             <a class="navbar-brand" href="#">xx社区</a>
@@ -51,23 +52,50 @@
         <div class="col-lg-9 col-md-12 col-sm-12 col-xs-12">
             <h2><span class="glyphicon glyphicon-list" aria-hidden="true"></span>发现</h2>
             <hr>
-                <div class="media"  th:each="question : ${questions}">
-                    <div class="media-left">
-                        <a href="#">
-                            <img class="media-object img-rounded"
-                                 th:src="${question.user.avatarUrl}"
-                                 src="https://avatars2.githubusercontent.com/u/57704817?v=4">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <h4 class="media-heading" th:text="${question.title}"></h4>
-                        <span th:text="${question.description}"></span><br>
-                        <span class="text-desc"><span th:text="${question.commentCount}"></span> 个回复 •
+            <div class="media" th:each="question : ${pagination.questions}">
+                <div class="media-left">
+                    <a href="#">
+                        <img class="media-object img-rounded"
+                             th:src="${question.user.avatarUrl}"
+                             src="https://avatars2.githubusercontent.com/u/57704817?v=4">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading" th:text="${question.title}"></h4>
+                    <span th:text="${question.description}"></span><br>
+                    <span class="text-desc"><span th:text="${question.commentCount}"></span> 个回复 •
                             <span th:text="${question.viewCount}"></span> 次浏览 •
                             <span th:text="${#dates.format(question.gmtCreate, 'yyyy-MM-dd HH:mm')}"></span>
                         </span>
-                    </div>
                 </div>
+            </div>
+            <nav aria-label="Page navigation">
+                <ul class="pagination">
+                    <li th:if="${pagination.showFirstPage}">
+                        <a href="/?page=1" aria-label="Previous">
+                            <span aria-hidden="true">&lt;&lt;</span>
+                        </a>
+                    </li>
+                    <li th:if="${pagination.showPrevious}">
+                        <a th:href="@{/(page=${pagination.page -1})}" aria-label="Previous">
+                            <span aria-hidden="true">&lt;</span>
+                        </a>
+                    </li>
+                    <li th:each="page : ${pagination.pages}" th:class="${pagination.page == page}? 'active' : ''">
+                        <a th:href="@{/(page=${page})}" th:text="${page}"></a>
+                    </li>
+                    <li th:if="${pagination.showNext}">
+                        <a th:href="@{/(page=${pagination.page +1})}" aria-label="Next">
+                            <span aria-hidden="true">&gt;</span>
+                        </a>
+                    </li>
+                    <li th:if="${pagination.showEndPage}">
+                        <a th:href="@{/(page=${pagination.totalPage})}" aria-label="Next">
+                            <span aria-hidden="true">&gt;&gt;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </div>
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
             <h3>最新问题</h3>
