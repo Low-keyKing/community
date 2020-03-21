@@ -3,6 +3,7 @@
 [springweb文档](https://spring.io/guides/gs/serving-web-content/)
 [Github OAuth](https://developer.github.com/apps/building-oauth-apps/)
 [Spring官方文档](https://docs.spring.io/spring-boot/docs/2.0.0.RC1/reference/htmlsingle/#boot-features-embedded-database-support)
+[spring MVC文档](https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#mvc)
 ##工具
 [Visual Paradigm](http://www.visual-paradigm.com)
 [flyway](https://flywaydb.org/getstarted/firststeps/maven)
