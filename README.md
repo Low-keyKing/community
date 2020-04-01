@@ -7,6 +7,8 @@
 ##工具
 [Visual Paradigm](http://www.visual-paradigm.com)
 [flyway](https://flywaydb.org/getstarted/firststeps/maven)
+[lombok](https://www.projectlombok.org)
+[Postman](https://chrome.google.com/webstore/detail/coohjcphdfgbiolnekdpbcijmhambjff)
 ##脚本
 ```sql
 CREATE TABLE `user` (
