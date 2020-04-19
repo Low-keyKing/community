@@ -3,6 +3,7 @@ package life.majiang.community.community.interceptor;
 import life.majiang.community.community.mapper.UserMapper;
 import life.majiang.community.community.model.User;
 import life.majiang.community.community.model.UserExample;
+import life.majiang.community.community.service.NotificationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -19,12 +20,15 @@ public class SessionInterceptor implements HandlerInterceptor {
     @Autowired
     private UserMapper userMapper;
 
+    @Autowired
+    private NotificationService notificationService;
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //获取所有cookie值放入数组里
         Cookie[] cookies = request.getCookies();
         //循环cookie数组
-        if(cookies != null && cookies.length != 0) {
+        if (cookies != null && cookies.length != 0) {
             for (Cookie cookie : cookies) {
                 //获取cookie数组中name为"token"的value值
                 //并通过value进入数据库查询获取user的值
@@ -37,6 +41,9 @@ public class SessionInterceptor implements HandlerInterceptor {
                     if (users.size() != 0) {
                         //创建一个session
                         request.getSession().setAttribute("user", users.get(0));
+                        //获取通知数
+                        Long unreadCount = notificationService.unreadCount(users.get(0).getId());
+                        request.getSession().setAttribute("unreadMessage", unreadCount);
                     }
                     break;
                 }

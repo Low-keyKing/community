@@ -35,36 +35,37 @@ body {
     margin-top: 25px;
 }
 
-.question-tag{
+.question-tag {
     margin-right: 5px;
 }
 
-.question-ralated{
+.question-ralated {
     list-style: none;
     padding-left: 0;
     font-size: 12px;
     line-height: 20px;
 }
 
-.question-whiteMeat{
+.question-whiteMeat {
     width: 100%;
 }
 
-.publish-tag-tab{
+.publish-tag-tab {
     display: none;
     margin-top: 10px;
 }
 
-.publish-tag-tab .tab-content{
+.publish-tag-tab .tab-content {
     padding-top: 10px;
 }
 
-.publish-tag-tab .label-info{
-    margin-right: 10px;
+.publish-tag-tab .label-info {
+    white-space: normal;
+    margin: 5px 5px;
+    display: inline-block;
 }
 
 .community-menu {
-    display: block;
     color: #999999;
     font-size: 13px;
     margin-bottom: 15px;
@@ -89,15 +90,15 @@ body {
     border-bottom: 1px solid #ebeaea;
 }
 
-.sub-comments{
+.sub-comments {
     margin-top: 10px;
-    margin-bottom:  15px;
+    margin-bottom: 15px;
     border: 1px solid #ebeaea;
     border-radius: 5px;
     padding-top: 15px;
 }
 
-.sub-comments .btn{
+.sub-comments .btn {
     margin: 10px 0;
 }
 
@@ -116,7 +117,7 @@ body {
     cursor: pointer;
 }
 
-.menu .comment-icon{
+.menu .comment-icon {
     font-size: 15px;
     cursor: pointer;
 }
@@ -125,7 +126,7 @@ body {
     color: #499ef3;
 }
 
-.pull-right{
+.pull-right {
     color: #999999;
 }
 
