@@ -9,6 +9,10 @@
     <script src="/community.js"></script>
     <script src="/moment.js"></script>
     <link rel="stylesheet" href="/community.css">
+    <link rel="stylesheet" href="/editormd.preview.min.css">
+    <script src="/editormd.min.js"></script>
+    <script src="/js/lib/marked.min.js"></script>
+    <script src="/js/lib/prettify.min.js"></script>
 </head>
 <body>
 <div th:insert="navigation :: nav"></div>
@@ -25,10 +29,17 @@
                 阅读数: <span th:text="${question.viewCount}"></span>
                 </span>
                 <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <!--描述-->
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" th:text="${question.description}"></div>
-                <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <!--内容-->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="question-view">
+                    <textarea style="display:none;" th:text="${question.description}"></textarea>
+                </div>
+                <script type="text/javascript">
+                    $(function() {
+                        editormd.markdownToHTML("question-view", {});
+                    });
+                </script>
                 <!--标签-->
+                <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <span class="label label-info question-tag" th:each="tag:${question.tag.split(',')}">
                         <span class="glyphicon glyphicon-tags"></span>
@@ -140,7 +151,7 @@
             <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <h4>瞎放图片</h4>
-                <img src="/img/whiteMeat.jpg" class="img-thumbnail question-whiteMeat"/>
+                <img src="/images/WhiteAndMeat.jpg" class="img-thumbnail question-whiteMeat"/>
             </div>
             <hr class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <!--相关问题-->
