@@ -21,6 +21,12 @@ body {
     padding-top: 10px;
 }
 
+.question-desc {
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+
 .text-desc {
     font-size: 12px;
     font-weight: normal;
