@@ -1,196 +1,371 @@
-2020-04-30 21:57:14.986  INFO 20468 --- [restartedMain] l.m.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-BNLODVI with PID 20468 (C:\Users\ASUS\IdeaProjects\community\target\classes started by ASUS in C:\Users\ASUS\IdeaProjects\community)
-2020-04-30 21:57:14.992  INFO 20468 --- [restartedMain] l.m.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
-2020-04-30 21:57:15.131  INFO 20468 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-04-30 21:57:15.139  INFO 20468 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-04-30 21:57:17.647  INFO 20468 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
-2020-04-30 21:57:17.663  INFO 20468 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-30 21:57:17.664  INFO 20468 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-30 21:57:17.823  INFO 20468 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-04-30 21:57:17.824  INFO 20468 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2685 ms
-2020-04-30 21:57:18.947  INFO 20468 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-30 21:57:19.103  INFO 20468 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-30 21:57:19.366  INFO 20468 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
-2020-04-30 21:57:19.369  INFO 20468 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-04-30 21:57:19.642  INFO 20468 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (com.mysql.jdbc.JDBC4Connection.getNetworkTimeout()I)
-2020-04-30 21:57:19.647  INFO 20468 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-04-30 21:57:19.654  INFO 20468 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost/community (MySQL 5.5)
-2020-04-30 21:57:20.017  INFO 20468 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 14 migrations (execution time 00:00.297s)
-2020-04-30 21:57:20.033  INFO 20468 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `community`: 14
-2020-04-30 21:57:20.034  INFO 20468 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `community` is up to date. No migration necessary.
-2020-04-30 21:57:20.897  INFO 20468 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-04-30 21:57:21.018  INFO 20468 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
-2020-04-30 21:57:21.028  INFO 20468 --- [restartedMain] l.m.c.community.CommunityApplication     : Started CommunityApplication in 6.835 seconds (JVM running for 8.726)
-2020-04-30 21:58:26.178  INFO 20468 --- [http-nio-8887-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-30 21:58:26.179  INFO 20468 --- [http-nio-8887-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-30 21:58:26.194  INFO 20468 --- [http-nio-8887-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
-2020-04-30 21:58:26.317 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user WHERE ( token = ? ) 
-2020-04-30 21:58:26.333 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByExample     : ==> Parameters: 77adf15a-2680-46c3-b489-c533cd15f844(String)
-2020-04-30 21:58:26.350 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByExample     : <==      Total: 1
-2020-04-30 21:58:26.363 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-30 21:58:26.364 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.N.countByExample               : ==> Parameters: 9(Long), 0(Integer)
-2020-04-30 21:58:26.366 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.N.countByExample               : <==      Total: 1
-2020-04-30 21:58:26.400 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.Q.countBySearch                : ==>  Preparing: select count(*) from question 
-2020-04-30 21:58:26.401 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.Q.countBySearch                : ==> Parameters: 
-2020-04-30 21:58:26.403 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.Q.countBySearch                : <==      Total: 1
-2020-04-30 21:58:26.405 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.Q.selectBySearch               : ==>  Preparing: select * from question order by gmt_create desc limit ?,? 
-2020-04-30 21:58:26.406 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.Q.selectBySearch               : ==> Parameters: 0(Integer), 5(Integer)
-2020-04-30 21:58:26.412 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.Q.selectBySearch               : <==      Total: 5
-2020-04-30 21:58:26.414 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ? 
-2020-04-30 21:58:26.414 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 9(Long)
-2020-04-30 21:58:26.415 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
-2020-04-30 21:58:26.427 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ? 
-2020-04-30 21:58:26.427 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 9(Long)
-2020-04-30 21:58:26.429 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
-2020-04-30 21:58:26.430 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ? 
-2020-04-30 21:58:26.430 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 9(Long)
-2020-04-30 21:58:26.431 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
-2020-04-30 21:58:26.432 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ? 
-2020-04-30 21:58:26.433 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 9(Long)
-2020-04-30 21:58:26.434 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
-2020-04-30 21:58:26.435 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ? 
-2020-04-30 21:58:26.436 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 9(Long)
-2020-04-30 21:58:26.437 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
-2020-04-30 21:58:26.968 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user WHERE ( token = ? ) 
-2020-04-30 21:58:26.968 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByExample     : ==> Parameters: 77adf15a-2680-46c3-b489-c533cd15f844(String)
-2020-04-30 21:58:26.969 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.UserMapper.selectByExample     : <==      Total: 1
-2020-04-30 21:58:26.971 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-30 21:58:26.971 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.N.countByExample               : ==> Parameters: 9(Long), 0(Integer)
-2020-04-30 21:58:26.974 DEBUG 20468 --- [http-nio-8887-exec-5] l.m.c.c.m.N.countByExample               : <==      Total: 1
-2020-04-30 21:58:27.529 DEBUG 20468 --- [http-nio-8887-exec-4] l.m.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user WHERE ( token = ? ) 
-2020-04-30 21:58:27.530 DEBUG 20468 --- [http-nio-8887-exec-4] l.m.c.c.m.UserMapper.selectByExample     : ==> Parameters: 77adf15a-2680-46c3-b489-c533cd15f844(String)
-2020-04-30 21:58:27.531 DEBUG 20468 --- [http-nio-8887-exec-4] l.m.c.c.m.UserMapper.selectByExample     : <==      Total: 1
-2020-04-30 21:58:27.533 DEBUG 20468 --- [http-nio-8887-exec-4] l.m.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-30 21:58:27.534 DEBUG 20468 --- [http-nio-8887-exec-4] l.m.c.c.m.N.countByExample               : ==> Parameters: 9(Long), 0(Integer)
-2020-04-30 21:58:27.535 DEBUG 20468 --- [http-nio-8887-exec-4] l.m.c.c.m.N.countByExample               : <==      Total: 1
-2020-04-30 22:00:31.003  INFO 20468 --- [Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-30 22:00:31.005  INFO 20468 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-04-30 22:00:31.011  INFO 20468 --- [Thread-18] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-04-30 22:00:35.882  INFO 19660 --- [restartedMain] l.m.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-BNLODVI with PID 19660 (C:\Users\ASUS\IdeaProjects\community\target\classes started by ASUS in C:\Users\ASUS\IdeaProjects\community)
-2020-04-30 22:00:35.903  INFO 19660 --- [restartedMain] l.m.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
-2020-04-30 22:00:36.010  INFO 19660 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-04-30 22:00:36.011  INFO 19660 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-04-30 22:00:38.975  INFO 19660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
-2020-04-30 22:00:38.984  INFO 19660 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-30 22:00:38.985  INFO 19660 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-30 22:00:39.189  INFO 19660 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-04-30 22:00:39.189  INFO 19660 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3178 ms
-2020-04-30 22:00:40.105  INFO 19660 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-30 22:00:40.190  INFO 19660 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-30 22:00:40.325  INFO 19660 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
-2020-04-30 22:00:40.328  INFO 19660 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2020-04-30 22:00:40.567  INFO 19660 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (com.mysql.jdbc.JDBC4Connection.getNetworkTimeout()I)
-2020-04-30 22:00:40.571  INFO 19660 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2020-04-30 22:00:40.578  INFO 19660 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost/community (MySQL 5.5)
-2020-04-30 22:00:40.695  INFO 19660 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 14 migrations (execution time 00:00.062s)
-2020-04-30 22:00:40.707  INFO 19660 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `community`: 14
-2020-04-30 22:00:40.709  INFO 19660 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `community` is up to date. No migration necessary.
-2020-04-30 22:00:41.207  INFO 19660 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-04-30 22:00:41.290  INFO 19660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
-2020-04-30 22:00:41.294  INFO 19660 --- [restartedMain] l.m.c.community.CommunityApplication     : Started CommunityApplication in 6.143 seconds (JVM running for 7.798)
-2020-04-30 22:00:51.324  INFO 19660 --- [http-nio-8887-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-30 22:00:51.325  INFO 19660 --- [http-nio-8887-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-30 22:00:51.338  INFO 19660 --- [http-nio-8887-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
-2020-04-30 22:00:51.488 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user WHERE ( token = ? ) 
-2020-04-30 22:00:51.499 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.UserMapper.selectByExample     : ==> Parameters: 77adf15a-2680-46c3-b489-c533cd15f844(String)
-2020-04-30 22:00:51.515 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.UserMapper.selectByExample     : <==      Total: 1
-2020-04-30 22:00:51.534 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-30 22:00:51.536 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.N.countByExample               : ==> Parameters: 9(Long), 0(Integer)
-2020-04-30 22:00:51.537 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.N.countByExample               : <==      Total: 1
-2020-04-30 22:00:51.575 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.Q.countBySearch                : ==>  Preparing: select count(*) from question 
-2020-04-30 22:00:51.576 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.Q.countBySearch                : ==> Parameters: 
-2020-04-30 22:00:51.577 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.Q.countBySearch                : <==      Total: 1
-2020-04-30 22:00:51.578 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.Q.selectBySearch               : ==>  Preparing: select * from question order by gmt_create desc limit ?,? 
-2020-04-30 22:00:51.578 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.Q.selectBySearch               : ==> Parameters: 0(Integer), 5(Integer)
-2020-04-30 22:00:51.583 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.Q.selectBySearch               : <==      Total: 5
-2020-04-30 22:00:51.585 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ? 
-2020-04-30 22:00:51.585 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 9(Long)
-2020-04-30 22:00:51.587 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
-2020-04-30 22:00:51.597 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ? 
-2020-04-30 22:00:51.598 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 9(Long)
-2020-04-30 22:00:51.599 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
-2020-04-30 22:00:51.601 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ? 
-2020-04-30 22:00:51.602 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 9(Long)
-2020-04-30 22:00:51.603 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
-2020-04-30 22:00:51.604 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ? 
-2020-04-30 22:00:51.605 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 9(Long)
-2020-04-30 22:00:51.606 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
-2020-04-30 22:00:51.607 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ? 
-2020-04-30 22:00:51.608 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 9(Long)
-2020-04-30 22:00:51.609 DEBUG 19660 --- [http-nio-8887-exec-2] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
-2020-04-30 22:00:52.320 DEBUG 19660 --- [http-nio-8887-exec-1] l.m.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user WHERE ( token = ? ) 
-2020-04-30 22:00:52.320 DEBUG 19660 --- [http-nio-8887-exec-1] l.m.c.c.m.UserMapper.selectByExample     : ==> Parameters: 77adf15a-2680-46c3-b489-c533cd15f844(String)
-2020-04-30 22:00:52.321 DEBUG 19660 --- [http-nio-8887-exec-1] l.m.c.c.m.UserMapper.selectByExample     : <==      Total: 1
-2020-04-30 22:00:52.323 DEBUG 19660 --- [http-nio-8887-exec-1] l.m.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-30 22:00:52.324 DEBUG 19660 --- [http-nio-8887-exec-1] l.m.c.c.m.N.countByExample               : ==> Parameters: 9(Long), 0(Integer)
-2020-04-30 22:00:52.325 DEBUG 19660 --- [http-nio-8887-exec-1] l.m.c.c.m.N.countByExample               : <==      Total: 1
-2020-04-30 22:01:02.612 DEBUG 19660 --- [http-nio-8887-exec-3] l.m.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user WHERE ( token = ? ) 
-2020-04-30 22:01:02.612 DEBUG 19660 --- [http-nio-8887-exec-3] l.m.c.c.m.UserMapper.selectByExample     : ==> Parameters: 77adf15a-2680-46c3-b489-c533cd15f844(String)
-2020-04-30 22:01:02.613 DEBUG 19660 --- [http-nio-8887-exec-3] l.m.c.c.m.UserMapper.selectByExample     : <==      Total: 1
-2020-04-30 22:01:02.615 DEBUG 19660 --- [http-nio-8887-exec-3] l.m.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-30 22:01:02.616 DEBUG 19660 --- [http-nio-8887-exec-3] l.m.c.c.m.N.countByExample               : ==> Parameters: 9(Long), 0(Integer)
-2020-04-30 22:01:02.617 DEBUG 19660 --- [http-nio-8887-exec-3] l.m.c.c.m.N.countByExample               : <==      Total: 1
-2020-04-30 22:02:52.567  INFO 19660 --- [Thread-17] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-04-30 22:02:52.568  INFO 19660 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2020-04-30 22:02:52.576  INFO 19660 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2020-04-30 22:02:53.567  INFO 19660 --- [restartedMain] l.m.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-BNLODVI with PID 19660 (C:\Users\ASUS\IdeaProjects\community\target\classes started by ASUS in C:\Users\ASUS\IdeaProjects\community)
-2020-04-30 22:02:53.568  INFO 19660 --- [restartedMain] l.m.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
-2020-04-30 22:02:54.369  INFO 19660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
-2020-04-30 22:02:54.372  INFO 19660 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-04-30 22:02:54.373  INFO 19660 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
-2020-04-30 22:02:54.429  INFO 19660 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-04-30 22:02:54.429  INFO 19660 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 855 ms
-2020-04-30 22:02:55.468  INFO 19660 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2020-04-30 22:02:55.489  INFO 19660 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
-2020-04-30 22:02:55.579  INFO 19660 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
-2020-04-30 22:02:55.586  INFO 19660 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Driver does not support get/set network timeout for connections. (com.mysql.jdbc.JDBC4Connection.getNetworkTimeout()I)
-2020-04-30 22:02:55.587  INFO 19660 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
-2020-04-30 22:02:55.587  INFO 19660 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost/community (MySQL 5.5)
-2020-04-30 22:02:55.621  INFO 19660 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 14 migrations (execution time 00:00.024s)
-2020-04-30 22:02:55.627  INFO 19660 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `community`: 14
-2020-04-30 22:02:55.628  INFO 19660 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `community` is up to date. No migration necessary.
-2020-04-30 22:02:56.041  INFO 19660 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-04-30 22:02:56.067  INFO 19660 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
-2020-04-30 22:02:56.071  INFO 19660 --- [restartedMain] l.m.c.community.CommunityApplication     : Started CommunityApplication in 2.563 seconds (JVM running for 142.574)
-2020-04-30 22:02:56.072  INFO 19660 --- [http-nio-8887-exec-10] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-04-30 22:02:56.073  INFO 19660 --- [http-nio-8887-exec-10] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-04-30 22:02:56.074  INFO 19660 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2020-04-30 22:02:56.078  INFO 19660 --- [http-nio-8887-exec-10] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2020-04-30 22:02:56.088 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user WHERE ( token = ? ) 
-2020-04-30 22:02:56.089 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByExample     : ==> Parameters: 77adf15a-2680-46c3-b489-c533cd15f844(String)
-2020-04-30 22:02:56.091 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByExample     : <==      Total: 1
-2020-04-30 22:02:56.098 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-30 22:02:56.098 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.N.countByExample               : ==> Parameters: 9(Long), 0(Integer)
-2020-04-30 22:02:56.099 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.N.countByExample               : <==      Total: 1
-2020-04-30 22:02:56.104 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.Q.countBySearch                : ==>  Preparing: select count(*) from question 
-2020-04-30 22:02:56.105 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.Q.countBySearch                : ==> Parameters: 
-2020-04-30 22:02:56.107 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.Q.countBySearch                : <==      Total: 1
-2020-04-30 22:02:56.108 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.Q.selectBySearch               : ==>  Preparing: select * from question order by gmt_create desc limit ?,? 
-2020-04-30 22:02:56.109 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.Q.selectBySearch               : ==> Parameters: 0(Integer), 5(Integer)
-2020-04-30 22:02:56.111 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.Q.selectBySearch               : <==      Total: 5
-2020-04-30 22:02:56.112 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ? 
-2020-04-30 22:02:56.112 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 9(Long)
-2020-04-30 22:02:56.113 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
-2020-04-30 22:02:56.126 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ? 
-2020-04-30 22:02:56.126 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 9(Long)
-2020-04-30 22:02:56.127 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
-2020-04-30 22:02:56.127 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ? 
-2020-04-30 22:02:56.128 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 9(Long)
-2020-04-30 22:02:56.128 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
-2020-04-30 22:02:56.128 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ? 
-2020-04-30 22:02:56.128 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 9(Long)
-2020-04-30 22:02:56.130 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
-2020-04-30 22:02:56.130 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user where id = ? 
-2020-04-30 22:02:56.130 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByPrimaryKey  : ==> Parameters: 9(Long)
-2020-04-30 22:02:56.131 DEBUG 19660 --- [http-nio-8887-exec-10] l.m.c.c.m.UserMapper.selectByPrimaryKey  : <==      Total: 1
-2020-04-30 22:02:56.197 DEBUG 19660 --- [http-nio-8887-exec-8] l.m.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user WHERE ( token = ? ) 
-2020-04-30 22:02:56.198 DEBUG 19660 --- [http-nio-8887-exec-8] l.m.c.c.m.UserMapper.selectByExample     : ==> Parameters: 77adf15a-2680-46c3-b489-c533cd15f844(String)
-2020-04-30 22:02:56.199 DEBUG 19660 --- [http-nio-8887-exec-8] l.m.c.c.m.UserMapper.selectByExample     : <==      Total: 1
-2020-04-30 22:02:56.200 DEBUG 19660 --- [http-nio-8887-exec-8] l.m.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-30 22:02:56.201 DEBUG 19660 --- [http-nio-8887-exec-8] l.m.c.c.m.N.countByExample               : ==> Parameters: 9(Long), 0(Integer)
-2020-04-30 22:02:56.202 DEBUG 19660 --- [http-nio-8887-exec-8] l.m.c.c.m.N.countByExample               : <==      Total: 1
-2020-04-30 22:02:56.424 DEBUG 19660 --- [http-nio-8887-exec-7] l.m.c.c.m.UserMapper.selectByExample     : ==>  Preparing: select id, account_id, name, token, gmt_create, gmt_modified, bio, avatar_url from user WHERE ( token = ? ) 
-2020-04-30 22:02:56.425 DEBUG 19660 --- [http-nio-8887-exec-7] l.m.c.c.m.UserMapper.selectByExample     : ==> Parameters: 77adf15a-2680-46c3-b489-c533cd15f844(String)
-2020-04-30 22:02:56.426 DEBUG 19660 --- [http-nio-8887-exec-7] l.m.c.c.m.UserMapper.selectByExample     : <==      Total: 1
-2020-04-30 22:02:56.428 DEBUG 19660 --- [http-nio-8887-exec-7] l.m.c.c.m.N.countByExample               : ==>  Preparing: select count(*) from notification WHERE ( receiver = ? and status = ? ) 
-2020-04-30 22:02:56.429 DEBUG 19660 --- [http-nio-8887-exec-7] l.m.c.c.m.N.countByExample               : ==> Parameters: 9(Long), 0(Integer)
-2020-04-30 22:02:56.430 DEBUG 19660 --- [http-nio-8887-exec-7] l.m.c.c.m.N.countByExample               : <==      Total: 1
+2020-05-15 17:09:57.424  INFO 7736 --- [restartedMain] l.m.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-BNLODVI with PID 7736 (C:\Users\ASUS\IdeaProjects\community\target\classes started by ASUS in C:\Users\ASUS\IdeaProjects\community)
+2020-05-15 17:09:57.474  INFO 7736 --- [restartedMain] l.m.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2020-05-15 17:09:57.584  INFO 7736 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-15 17:09:57.594  INFO 7736 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-15 17:09:59.684  INFO 7736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-05-15 17:09:59.704  INFO 7736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-15 17:09:59.704  INFO 7736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-05-15 17:09:59.974  INFO 7736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-15 17:09:59.984  INFO 7736 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2390 ms
+2020-05-15 17:10:00.904  INFO 7736 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-15 17:10:00.964  INFO 7736 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-15 17:10:01.094  INFO 7736 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2020-05-15 17:10:01.094  INFO 7736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-15 17:10:01.253  INFO 7736 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (com.mysql.jdbc.JDBC4Connection.getNetworkTimeout()I)
+2020-05-15 17:10:01.263  INFO 7736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-15 17:10:01.263  INFO 7736 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost/community (MySQL 5.5)
+2020-05-15 17:10:01.393  INFO 7736 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 14 migrations (execution time 00:00.060s)
+2020-05-15 17:10:01.403  INFO 7736 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `community`: 14
+2020-05-15 17:10:01.403  INFO 7736 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `community` is up to date. No migration necessary.
+2020-05-15 17:10:01.443  INFO 7736 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-15 17:10:01.813  INFO 7736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-15 17:10:01.843  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:10:01 CST 2020
+2020-05-15 17:10:01.863  INFO 7736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-05-15 17:10:01.873  INFO 7736 --- [restartedMain] l.m.c.community.CommunityApplication     : Started CommunityApplication in 5.095 seconds (JVM running for 7.226)
+2020-05-15 17:10:01.893  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:10:01 CST 2020
+2020-05-15 17:10:17.174  INFO 7736 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-15 17:10:17.175  INFO 7736 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-15 17:10:17.200  INFO 7736 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2020-05-15 17:10:21.852  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:10:21 CST 2020
+2020-05-15 17:10:21.852  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:10:21 CST 2020
+2020-05-15 17:10:41.843  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:10:41 CST 2020
+2020-05-15 17:10:41.843  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:10:41 CST 2020
+2020-05-15 17:11:01.848  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:11:01 CST 2020
+2020-05-15 17:11:01.886  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:11:01 CST 2020
+2020-05-15 17:11:21.848  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:11:21 CST 2020
+2020-05-15 17:11:21.848  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:11:21 CST 2020
+2020-05-15 17:11:32.524 ERROR 7736 --- [http-nio-8887-exec-1] l.m.c.c.controller.AuthorizeController   : callback get github error,null
+2020-05-15 17:11:37.290 ERROR 7736 --- [http-nio-8887-exec-6] l.m.c.c.controller.AuthorizeController   : callback get github error,null
+2020-05-15 17:11:41.844  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:11:41 CST 2020
+2020-05-15 17:11:41.846  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:11:41 CST 2020
+2020-05-15 17:11:42.885 ERROR 7736 --- [http-nio-8887-exec-10] l.m.c.c.controller.AuthorizeController   : callback get github error,null
+2020-05-15 17:11:49.426 ERROR 7736 --- [http-nio-8887-exec-4] l.m.c.c.controller.AuthorizeController   : callback get github error,null
+2020-05-15 17:12:01.849  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:12:01 CST 2020
+2020-05-15 17:12:01.849  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:12:01 CST 2020
+2020-05-15 17:12:21.847  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:12:21 CST 2020
+2020-05-15 17:12:21.847  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:12:21 CST 2020
+2020-05-15 17:12:41.849  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:12:41 CST 2020
+2020-05-15 17:12:41.849  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:12:41 CST 2020
+2020-05-15 17:12:54.216  INFO 7736 --- [Thread-17] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-15 17:12:54.216  INFO 7736 --- [Thread-17] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-15 17:12:54.216  INFO 7736 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-15 17:12:54.226  INFO 7736 --- [Thread-17] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-15 17:12:55.374  INFO 7736 --- [restartedMain] l.m.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-BNLODVI with PID 7736 (C:\Users\ASUS\IdeaProjects\community\target\classes started by ASUS in C:\Users\ASUS\IdeaProjects\community)
+2020-05-15 17:12:55.374  INFO 7736 --- [restartedMain] l.m.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2020-05-15 17:12:56.004  INFO 7736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-05-15 17:12:56.004  INFO 7736 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-15 17:12:56.004  INFO 7736 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-05-15 17:12:56.044  INFO 7736 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-15 17:12:56.044  INFO 7736 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 670 ms
+2020-05-15 17:12:56.304  INFO 7736 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-15 17:12:56.324  INFO 7736 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-15 17:12:56.364  INFO 7736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-05-15 17:12:56.374  INFO 7736 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Driver does not support get/set network timeout for connections. (com.mysql.jdbc.JDBC4Connection.getNetworkTimeout()I)
+2020-05-15 17:12:56.374  INFO 7736 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-05-15 17:12:56.374  INFO 7736 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost/community (MySQL 5.5)
+2020-05-15 17:12:56.404  INFO 7736 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 14 migrations (execution time 00:00.023s)
+2020-05-15 17:12:56.404  INFO 7736 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `community`: 14
+2020-05-15 17:12:56.414  INFO 7736 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `community` is up to date. No migration necessary.
+2020-05-15 17:12:56.424  INFO 7736 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-15 17:12:56.764  INFO 7736 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-15 17:12:56.774  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:12:56 CST 2020
+2020-05-15 17:12:56.784  INFO 7736 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-05-15 17:12:56.794  INFO 7736 --- [restartedMain] l.m.c.community.CommunityApplication     : Started CommunityApplication in 1.484 seconds (JVM running for 182.144)
+2020-05-15 17:12:56.794  INFO 7736 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-15 17:12:56.794  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:12:56 CST 2020
+2020-05-15 17:13:16.784  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:13:16 CST 2020
+2020-05-15 17:13:16.784  INFO 7736 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:13:16 CST 2020
+2020-05-15 17:13:41.802  INFO 14768 --- [restartedMain] l.m.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-BNLODVI with PID 14768 (C:\Users\ASUS\IdeaProjects\community\target\classes started by ASUS in C:\Users\ASUS\IdeaProjects\community)
+2020-05-15 17:13:41.802  INFO 14768 --- [restartedMain] l.m.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2020-05-15 17:13:41.892  INFO 14768 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-15 17:13:41.892  INFO 14768 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-15 17:13:43.697  INFO 14768 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-05-15 17:13:43.697  INFO 14768 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-15 17:13:43.697  INFO 14768 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-05-15 17:13:43.827  INFO 14768 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-15 17:13:43.827  INFO 14768 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1935 ms
+2020-05-15 17:13:44.755  INFO 14768 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-15 17:13:44.835  INFO 14768 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-15 17:13:45.005  INFO 14768 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2020-05-15 17:13:45.005  INFO 14768 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-15 17:13:45.165  INFO 14768 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (com.mysql.jdbc.JDBC4Connection.getNetworkTimeout()I)
+2020-05-15 17:13:45.165  INFO 14768 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-15 17:13:45.175  INFO 14768 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost/community (MySQL 5.5)
+2020-05-15 17:13:45.265  INFO 14768 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 14 migrations (execution time 00:00.051s)
+2020-05-15 17:13:45.275  INFO 14768 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `community`: 14
+2020-05-15 17:13:45.275  INFO 14768 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `community` is up to date. No migration necessary.
+2020-05-15 17:13:45.325  INFO 14768 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-15 17:13:45.715  INFO 14768 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-15 17:13:45.735  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:13:45 CST 2020
+2020-05-15 17:13:45.765  INFO 14768 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-05-15 17:13:45.775  INFO 14768 --- [restartedMain] l.m.c.community.CommunityApplication     : Started CommunityApplication in 4.567 seconds (JVM running for 8.233)
+2020-05-15 17:13:45.795  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:13:45 CST 2020
+2020-05-15 17:13:49.592  INFO 14768 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-15 17:13:49.593  INFO 14768 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-15 17:13:49.610  INFO 14768 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-05-15 17:14:05.750  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:14:05 CST 2020
+2020-05-15 17:14:05.750  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:14:05 CST 2020
+2020-05-15 17:14:25.745  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:14:25 CST 2020
+2020-05-15 17:14:25.745  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:14:25 CST 2020
+2020-05-15 17:14:45.744  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:14:45 CST 2020
+2020-05-15 17:14:45.744  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:14:45 CST 2020
+2020-05-15 17:15:05.746  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:15:05 CST 2020
+2020-05-15 17:15:05.746  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:15:05 CST 2020
+2020-05-15 17:15:25.746  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:15:25 CST 2020
+2020-05-15 17:15:25.746  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:15:25 CST 2020
+2020-05-15 17:15:45.746  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:15:45 CST 2020
+2020-05-15 17:15:45.746  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:15:45 CST 2020
+2020-05-15 17:16:05.748  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:16:05 CST 2020
+2020-05-15 17:16:05.748  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:16:05 CST 2020
+2020-05-15 17:16:25.751  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:16:25 CST 2020
+2020-05-15 17:16:25.751  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:16:25 CST 2020
+2020-05-15 17:16:45.758  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:16:45 CST 2020
+2020-05-15 17:16:45.768  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:16:45 CST 2020
+2020-05-15 17:17:05.752  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:17:05 CST 2020
+2020-05-15 17:17:05.752  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:17:05 CST 2020
+2020-05-15 17:17:25.746  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:17:25 CST 2020
+2020-05-15 17:17:25.746  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:17:25 CST 2020
+2020-05-15 17:17:45.748  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:17:45 CST 2020
+2020-05-15 17:17:45.748  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:17:45 CST 2020
+2020-05-15 17:18:05.748  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:18:05 CST 2020
+2020-05-15 17:18:05.748  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:18:05 CST 2020
+2020-05-15 17:18:25.744  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:18:25 CST 2020
+2020-05-15 17:18:25.744  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:18:25 CST 2020
+2020-05-15 17:18:45.745  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:18:45 CST 2020
+2020-05-15 17:18:45.745  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:18:45 CST 2020
+2020-05-15 17:19:05.750  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:19:05 CST 2020
+2020-05-15 17:19:05.750  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:19:05 CST 2020
+2020-05-15 17:19:25.746  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:19:25 CST 2020
+2020-05-15 17:19:25.746  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:19:25 CST 2020
+2020-05-15 17:19:45.748  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:19:45 CST 2020
+2020-05-15 17:19:45.748  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:19:45 CST 2020
+2020-05-15 17:20:05.749  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:20:05 CST 2020
+2020-05-15 17:20:05.749  INFO 14768 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:20:05 CST 2020
+2020-05-15 17:20:24.526  INFO 14768 --- [Thread-14] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-15 17:20:24.526  INFO 14768 --- [Thread-14] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-15 17:20:24.526  INFO 14768 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-15 17:20:24.536  INFO 14768 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-15 17:20:40.709  INFO 14492 --- [restartedMain] l.m.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-BNLODVI with PID 14492 (C:\Users\ASUS\IdeaProjects\community\target\classes started by ASUS in C:\Users\ASUS\IdeaProjects\community)
+2020-05-15 17:20:40.719  INFO 14492 --- [restartedMain] l.m.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2020-05-15 17:20:40.789  INFO 14492 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-15 17:20:40.789  INFO 14492 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-15 17:20:42.484  INFO 14492 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-05-15 17:20:42.494  INFO 14492 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-15 17:20:42.494  INFO 14492 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-05-15 17:20:42.744  INFO 14492 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-15 17:20:42.744  INFO 14492 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1955 ms
+2020-05-15 17:20:43.504  INFO 14492 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-15 17:20:43.564  INFO 14492 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-15 17:20:43.684  INFO 14492 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2020-05-15 17:20:43.694  INFO 14492 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-15 17:20:43.823  INFO 14492 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (com.mysql.jdbc.JDBC4Connection.getNetworkTimeout()I)
+2020-05-15 17:20:43.823  INFO 14492 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-15 17:20:43.833  INFO 14492 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost/community (MySQL 5.5)
+2020-05-15 17:20:43.913  INFO 14492 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 14 migrations (execution time 00:00.048s)
+2020-05-15 17:20:43.923  INFO 14492 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `community`: 14
+2020-05-15 17:20:43.923  INFO 14492 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `community` is up to date. No migration necessary.
+2020-05-15 17:20:43.963  INFO 14492 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-15 17:20:44.273  INFO 14492 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-15 17:20:44.303  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:20:44 CST 2020
+2020-05-15 17:20:44.323  INFO 14492 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-05-15 17:20:44.333  INFO 14492 --- [restartedMain] l.m.c.community.CommunityApplication     : Started CommunityApplication in 4.161 seconds (JVM running for 6.049)
+2020-05-15 17:20:44.353  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:20:44 CST 2020
+2020-05-15 17:20:47.986  INFO 14492 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-15 17:20:47.988  INFO 14492 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-15 17:20:47.996  INFO 14492 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-05-15 17:21:04.309  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:21:04 CST 2020
+2020-05-15 17:21:04.311  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:21:04 CST 2020
+2020-05-15 17:21:24.306  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:21:24 CST 2020
+2020-05-15 17:21:24.307  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:21:24 CST 2020
+2020-05-15 17:21:44.305  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:21:44 CST 2020
+2020-05-15 17:21:44.305  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:21:44 CST 2020
+2020-05-15 17:22:04.308  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:22:04 CST 2020
+2020-05-15 17:22:04.308  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:22:04 CST 2020
+2020-05-15 17:22:24.305  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:22:24 CST 2020
+2020-05-15 17:22:24.305  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:22:24 CST 2020
+2020-05-15 17:22:44.307  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:22:44 CST 2020
+2020-05-15 17:22:44.307  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:22:44 CST 2020
+2020-05-15 17:23:04.307  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:23:04 CST 2020
+2020-05-15 17:23:04.307  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:23:04 CST 2020
+2020-05-15 17:23:24.306  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:23:24 CST 2020
+2020-05-15 17:23:24.306  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:23:24 CST 2020
+2020-05-15 17:23:44.312  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:23:44 CST 2020
+2020-05-15 17:23:44.312  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:23:44 CST 2020
+2020-05-15 17:24:04.308  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:24:04 CST 2020
+2020-05-15 17:24:04.308  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:24:04 CST 2020
+2020-05-15 17:24:24.310  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:24:24 CST 2020
+2020-05-15 17:24:24.310  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:24:24 CST 2020
+2020-05-15 17:24:40.915  INFO 14492 --- [Thread-14] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-15 17:24:40.915  INFO 14492 --- [Thread-14] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-15 17:24:40.915  INFO 14492 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-15 17:24:40.935  INFO 14492 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-15 17:24:42.163  INFO 14492 --- [restartedMain] l.m.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-BNLODVI with PID 14492 (C:\Users\ASUS\IdeaProjects\community\target\classes started by ASUS in C:\Users\ASUS\IdeaProjects\community)
+2020-05-15 17:24:42.163  INFO 14492 --- [restartedMain] l.m.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2020-05-15 17:24:42.623  INFO 14492 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-05-15 17:24:42.623  INFO 14492 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-15 17:24:42.623  INFO 14492 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-05-15 17:24:42.673  INFO 14492 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-15 17:24:42.673  INFO 14492 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 500 ms
+2020-05-15 17:24:42.843  INFO 14492 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-15 17:24:42.863  INFO 14492 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-15 17:24:42.893  INFO 14492 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-05-15 17:24:42.903  INFO 14492 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Driver does not support get/set network timeout for connections. (com.mysql.jdbc.JDBC4Connection.getNetworkTimeout()I)
+2020-05-15 17:24:42.903  INFO 14492 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-05-15 17:24:42.903  INFO 14492 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost/community (MySQL 5.5)
+2020-05-15 17:24:42.923  INFO 14492 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 14 migrations (execution time 00:00.016s)
+2020-05-15 17:24:42.923  INFO 14492 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `community`: 14
+2020-05-15 17:24:42.933  INFO 14492 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `community` is up to date. No migration necessary.
+2020-05-15 17:24:42.933  INFO 14492 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-15 17:24:43.229  INFO 14492 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-15 17:24:43.249  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:24:43 CST 2020
+2020-05-15 17:24:43.249  INFO 14492 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-05-15 17:24:43.249  INFO 14492 --- [restartedMain] l.m.c.community.CommunityApplication     : Started CommunityApplication in 1.136 seconds (JVM running for 244.971)
+2020-05-15 17:24:43.259  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:24:43 CST 2020
+2020-05-15 17:24:43.259  INFO 14492 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-15 17:25:03.257  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:25:03 CST 2020
+2020-05-15 17:25:03.257  INFO 14492 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:25:03 CST 2020
+2020-05-15 17:25:20.642  INFO 14676 --- [restartedMain] l.m.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-BNLODVI with PID 14676 (C:\Users\ASUS\IdeaProjects\community\target\classes started by ASUS in C:\Users\ASUS\IdeaProjects\community)
+2020-05-15 17:25:20.642  INFO 14676 --- [restartedMain] l.m.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2020-05-15 17:25:20.752  INFO 14676 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-15 17:25:20.752  INFO 14676 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-15 17:25:22.751  INFO 14676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-05-15 17:25:22.761  INFO 14676 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-15 17:25:22.761  INFO 14676 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-05-15 17:25:23.041  INFO 14676 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-15 17:25:23.041  INFO 14676 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2289 ms
+2020-05-15 17:25:24.411  INFO 14676 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-15 17:25:24.471  INFO 14676 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-15 17:25:24.571  INFO 14676 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2020-05-15 17:25:24.581  INFO 14676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-15 17:25:24.701  INFO 14676 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (com.mysql.jdbc.JDBC4Connection.getNetworkTimeout()I)
+2020-05-15 17:25:24.701  INFO 14676 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-15 17:25:24.711  INFO 14676 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost/community (MySQL 5.5)
+2020-05-15 17:25:24.781  INFO 14676 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 14 migrations (execution time 00:00.039s)
+2020-05-15 17:25:24.791  INFO 14676 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `community`: 14
+2020-05-15 17:25:24.791  INFO 14676 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `community` is up to date. No migration necessary.
+2020-05-15 17:25:24.831  INFO 14676 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-15 17:25:25.240  INFO 14676 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-15 17:25:25.270  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:25:25 CST 2020
+2020-05-15 17:25:25.300  INFO 14676 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-05-15 17:25:25.300  INFO 14676 --- [restartedMain] l.m.c.community.CommunityApplication     : Started CommunityApplication in 5.285 seconds (JVM running for 7.5)
+2020-05-15 17:25:25.320  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:25:25 CST 2020
+2020-05-15 17:25:28.558  INFO 14676 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-15 17:25:28.558  INFO 14676 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-15 17:25:28.567  INFO 14676 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-05-15 17:25:45.274  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:25:45 CST 2020
+2020-05-15 17:25:45.274  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:25:45 CST 2020
+2020-05-15 17:26:05.275  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:26:05 CST 2020
+2020-05-15 17:26:05.275  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:26:05 CST 2020
+2020-05-15 17:26:25.270  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:26:25 CST 2020
+2020-05-15 17:26:25.270  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:26:25 CST 2020
+2020-05-15 17:26:45.279  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:26:45 CST 2020
+2020-05-15 17:26:45.279  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:26:45 CST 2020
+2020-05-15 17:27:05.275  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:27:05 CST 2020
+2020-05-15 17:27:05.275  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:27:05 CST 2020
+2020-05-15 17:27:25.274  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:27:25 CST 2020
+2020-05-15 17:27:25.274  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:27:25 CST 2020
+2020-05-15 17:27:45.277  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:27:45 CST 2020
+2020-05-15 17:27:45.277  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:27:45 CST 2020
+2020-05-15 17:28:05.275  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:28:05 CST 2020
+2020-05-15 17:28:05.275  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:28:05 CST 2020
+2020-05-15 17:28:25.278  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:28:25 CST 2020
+2020-05-15 17:28:25.278  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:28:25 CST 2020
+2020-05-15 17:28:45.276  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:28:45 CST 2020
+2020-05-15 17:28:45.276  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:28:45 CST 2020
+2020-05-15 17:29:05.274  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:29:05 CST 2020
+2020-05-15 17:29:05.274  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:29:05 CST 2020
+2020-05-15 17:29:25.270  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:29:25 CST 2020
+2020-05-15 17:29:25.273  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:29:25 CST 2020
+2020-05-15 17:29:45.271  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:29:45 CST 2020
+2020-05-15 17:29:45.273  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:29:45 CST 2020
+2020-05-15 17:30:05.278  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:30:05 CST 2020
+2020-05-15 17:30:05.278  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:30:05 CST 2020
+2020-05-15 17:30:25.278  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:30:25 CST 2020
+2020-05-15 17:30:25.278  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:30:25 CST 2020
+2020-05-15 17:30:45.271  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:30:45 CST 2020
+2020-05-15 17:30:45.271  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:30:45 CST 2020
+2020-05-15 17:31:05.273  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:31:05 CST 2020
+2020-05-15 17:31:05.273  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:31:05 CST 2020
+2020-05-15 17:31:25.272  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:31:25 CST 2020
+2020-05-15 17:31:25.272  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:31:25 CST 2020
+2020-05-15 17:31:45.275  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:31:45 CST 2020
+2020-05-15 17:31:45.275  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:31:45 CST 2020
+2020-05-15 17:32:05.277  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:32:05 CST 2020
+2020-05-15 17:32:05.277  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:32:05 CST 2020
+2020-05-15 17:32:25.274  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:32:25 CST 2020
+2020-05-15 17:32:25.274  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:32:25 CST 2020
+2020-05-15 17:32:45.273  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:32:45 CST 2020
+2020-05-15 17:32:45.273  INFO 14676 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:32:45 CST 2020
+2020-05-15 17:32:52.450  INFO 15116 --- [restartedMain] l.m.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-BNLODVI with PID 15116 (C:\Users\ASUS\IdeaProjects\community\target\classes started by ASUS in C:\Users\ASUS\IdeaProjects\community)
+2020-05-15 17:32:52.460  INFO 15116 --- [restartedMain] l.m.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2020-05-15 17:32:52.530  INFO 15116 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-05-15 17:32:52.530  INFO 15116 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-05-15 17:32:54.200  INFO 15116 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-05-15 17:32:54.230  INFO 15116 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-15 17:32:54.230  INFO 15116 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-05-15 17:32:54.430  INFO 15116 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-15 17:32:54.430  INFO 15116 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1900 ms
+2020-05-15 17:32:55.310  INFO 15116 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-15 17:32:55.380  INFO 15116 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-15 17:32:55.500  INFO 15116 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+2020-05-15 17:32:55.500  INFO 15116 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-15 17:32:55.630  INFO 15116 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-1 - Driver does not support get/set network timeout for connections. (com.mysql.jdbc.JDBC4Connection.getNetworkTimeout()I)
+2020-05-15 17:32:55.630  INFO 15116 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-15 17:32:55.640  INFO 15116 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost/community (MySQL 5.5)
+2020-05-15 17:32:55.710  INFO 15116 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 14 migrations (execution time 00:00.039s)
+2020-05-15 17:32:55.720  INFO 15116 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `community`: 14
+2020-05-15 17:32:55.720  INFO 15116 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `community` is up to date. No migration necessary.
+2020-05-15 17:32:55.750  INFO 15116 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-15 17:32:56.086  INFO 15116 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-15 17:32:56.116  INFO 15116 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:32:56 CST 2020
+2020-05-15 17:32:56.136  INFO 15116 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-05-15 17:32:56.146  INFO 15116 --- [restartedMain] l.m.c.community.CommunityApplication     : Started CommunityApplication in 4.19 seconds (JVM running for 5.986)
+2020-05-15 17:32:56.156  INFO 15116 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:32:56 CST 2020
+2020-05-15 17:33:16.124  INFO 15116 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:33:16 CST 2020
+2020-05-15 17:33:16.124  INFO 15116 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:33:16 CST 2020
+2020-05-15 17:33:32.868  INFO 15116 --- [http-nio-8887-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-15 17:33:32.870  INFO 15116 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-15 17:33:32.883  INFO 15116 --- [http-nio-8887-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-05-15 17:33:36.122  INFO 15116 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:33:36 CST 2020
+2020-05-15 17:33:36.122  INFO 15116 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:33:36 CST 2020
+2020-05-15 17:33:56.122  INFO 15116 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:33:56 CST 2020
+2020-05-15 17:33:56.124  INFO 15116 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:33:56 CST 2020
+2020-05-15 17:34:16.121  INFO 15116 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:34:16 CST 2020
+2020-05-15 17:34:16.123  INFO 15116 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:34:16 CST 2020
+2020-05-15 17:34:36.124  INFO 15116 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:34:36 CST 2020
+2020-05-15 17:34:36.124  INFO 15116 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:34:36 CST 2020
+2020-05-15 17:34:56.123  INFO 15116 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:34:56 CST 2020
+2020-05-15 17:34:56.123  INFO 15116 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:34:56 CST 2020
+2020-05-15 17:35:16.123  INFO 15116 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:35:16 CST 2020
+2020-05-15 17:35:16.123  INFO 15116 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:35:16 CST 2020
+2020-05-15 17:35:30.111  INFO 15116 --- [Thread-14] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService 'taskScheduler'
+2020-05-15 17:35:30.131  INFO 15116 --- [Thread-14] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-05-15 17:35:30.131  INFO 15116 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2020-05-15 17:35:30.141  INFO 15116 --- [Thread-14] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2020-05-15 17:35:31.282  INFO 15116 --- [restartedMain] l.m.c.community.CommunityApplication     : Starting CommunityApplication on DESKTOP-BNLODVI with PID 15116 (C:\Users\ASUS\IdeaProjects\community\target\classes started by ASUS in C:\Users\ASUS\IdeaProjects\community)
+2020-05-15 17:35:31.282  INFO 15116 --- [restartedMain] l.m.c.community.CommunityApplication     : No active profile set, falling back to default profiles: default
+2020-05-15 17:35:31.862  INFO 15116 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8887 (http)
+2020-05-15 17:35:31.862  INFO 15116 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-15 17:35:31.862  INFO 15116 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.31]
+2020-05-15 17:35:31.912  INFO 15116 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-15 17:35:31.912  INFO 15116 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 630 ms
+2020-05-15 17:35:32.132  INFO 15116 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-15 17:35:32.152  INFO 15116 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-05-15 17:35:32.202  INFO 15116 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2020-05-15 17:35:32.202  INFO 15116 --- [restartedMain] com.zaxxer.hikari.pool.PoolBase          : HikariPool-2 - Driver does not support get/set network timeout for connections. (com.mysql.jdbc.JDBC4Connection.getNetworkTimeout()I)
+2020-05-15 17:35:32.202  INFO 15116 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2020-05-15 17:35:32.202  INFO 15116 --- [restartedMain] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://localhost/community (MySQL 5.5)
+2020-05-15 17:35:32.242  INFO 15116 --- [restartedMain] o.f.core.internal.command.DbValidate     : Successfully validated 14 migrations (execution time 00:00.024s)
+2020-05-15 17:35:32.242  INFO 15116 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema `community`: 14
+2020-05-15 17:35:32.242  INFO 15116 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Schema `community` is up to date. No migration necessary.
+2020-05-15 17:35:32.262  INFO 15116 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2020-05-15 17:35:32.602  INFO 15116 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-15 17:35:32.622  INFO 15116 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule start Fri May 15 17:35:32 CST 2020
+2020-05-15 17:35:32.632  INFO 15116 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8887 (http) with context path ''
+2020-05-15 17:35:32.632  INFO 15116 --- [restartedMain] l.m.c.community.CommunityApplication     : Started CommunityApplication in 1.405 seconds (JVM running for 162.476)
+2020-05-15 17:35:32.632  INFO 15116 --- [scheduling-1] l.m.c.community.schedule.HotTagTasks     : hotTagSchedule stop Fri May 15 17:35:32 CST 2020
+2020-05-15 17:35:32.632  INFO 15116 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-05-15 17:36:30.098  INFO 15116 --- [http-nio-8887-exec-9] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-15 17:36:30.099  INFO 15116 --- [http-nio-8887-exec-9] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-15 17:36:30.105  INFO 15116 --- [http-nio-8887-exec-9] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-05-15 17:40:14.620 ERROR 15116 --- [http-nio-8887-exec-10] l.m.c.c.controller.AuthorizeController   : callback get github error,null
